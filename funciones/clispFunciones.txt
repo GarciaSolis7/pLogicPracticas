@@ -1,0 +1,89 @@
+Garcia Solis.
+
+
+Table of Contents
+─────────────────
+
+
+1 Problemas con car y cdr
+═════════════════════════
+
+ 1. Lista: (a b c d e) → Extraer d
+
+    RESPUESTA=(cadddr'(a b c d e))
+
+ 2. Lista: ((1 2) (3 4) (5 6)) → Extraer 5
+    
+    RESPUESTA=  (caaddr '((1 2) (3 4) (5 6)))
+
+ 3. Lista: ((a b) (c d) (e f)) → Extraer e
+
+    RESPUESTA=  (caaddr '((a b) (c d) (e f)))
+
+ 4. Lista: ((x y) ((p q) (r s)) (z w)) → Extraer z
+
+    RESPUESTA=  (caaddr '((x y) ((p q) (r s)) (z w)))
+
+ 5. Lista: ((1 (2 3)) (4 (5 6))) → Extraer 6
+
+    RESPUESTA=  (cdr (cadr (cadr '((1 (2 3)) (4 (5 6))))))
+
+ 6. Lista: (((a b) c) d e) → Extraer c
+
+    RESPUESTA=
+
+ 7. Lista: (((1 2) 3) ((4 5) 6)) → Extraer 6
+
+    RESPUESTA=
+
+ 8. Lista: ((p (q (r s))) t u) → Extraer (r s)
+  
+    RESPUESTA=
+
+ 9. Lista: (((a) b) (c (d e)) f) → Extraer d
+
+    RESPUESTA=
+
+ 10. Lista: ((1 (2 (3 4))) (5 6)) → Extraer 3
+
+     RESPUESTA=
+
+ 11. Lista: (((x) (y)) ((z) (w))) → Extraer (w)
+
+     RESPUESTA=
+
+ 12.Lista: ((a (b (c d))) (e f)) → Extraer c
+
+    RESPUESTA=
+
+ 13. Lista: ((1 (2 (3 (4 5)))) (6 7)) → Extraer 4
+
+     RESPUESTA=
+
+ 14. Lista: (((a b) c) ((d e) f) ((g h) i)) → Extraer g
+
+     RESPUESTA=
+
+ 15. Lista: (((x y) (z w)) ((p q) (r s))) → Extraer r
+
+     RESPUESTA=
+
+ 16. Lista: ((1 (2 (3 (4 (5 6))))) (7 8)) → Extraer 5
+
+     RESPUESTA=
+
+ 17. Lista: ((a (b (c (d e)))) (f g)) → Extraer d
+
+     RESPUESTA=
+
+ 18. Lista: (((1 2) (3 4)) ((5 6) (7 8))) → Extraer 7
+
+     RESPUESTA=
+
+ 19. Lista: ((x (y (z (w v))))) → Extraer w
+
+     RESPUESTA=
+
+ 20. Lista: (((a b c) (d e f)) ((g h i) (j k l))) → Extraer j
+
+     RESPUESTA=
