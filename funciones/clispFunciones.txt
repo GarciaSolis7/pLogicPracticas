@@ -1,10 +1,5 @@
 Garcia Solis.
-
-
-Table of Contents
 ─────────────────
-
-
 1 Problemas con car y cdr
 ═════════════════════════
 
@@ -30,60 +25,60 @@ Table of Contents
 
  6. Lista: (((a b) c) d e) → Extraer c
 
-    RESPUESTA=
+    RESPUESTA=  (car (cdar ' (((a b) c) d e)))
 
  7. Lista: (((1 2) 3) ((4 5) 6)) → Extraer 6
 
-    RESPUESTA=
+    RESPUESTA=  (cdr (cadr '  (((1 2) 3) ((4 5) 6)))) 
 
  8. Lista: ((p (q (r s))) t u) → Extraer (r s)
   
-    RESPUESTA=
+    RESPUESTA= (car (cdr (car (cdr (car '((p (q (r s))) t u))))))
 
  9. Lista: (((a) b) (c (d e)) f) → Extraer d
 
-    RESPUESTA=
+    RESPUESTA= (caar (cdadr '(((a) b) (c (d e)) f)))
 
  10. Lista: ((1 (2 (3 4))) (5 6)) → Extraer 3
 
-     RESPUESTA=
+     RESPUESTA=  (caadr(cadar'((1 (2 (3 4))) (5 6))))
 
  11. Lista: (((x) (y)) ((z) (w))) → Extraer (w)
 
-     RESPUESTA=
+     RESPUESTA= (cadadr '(((x) (y)) ((z) (w))))
 
  12.Lista: ((a (b (c d))) (e f)) → Extraer c
 
-    RESPUESTA=
+    RESPUESTA= (caar(cdadar' ((a (b (c d))) (e f))))
 
  13. Lista: ((1 (2 (3 (4 5)))) (6 7)) → Extraer 4
 
-     RESPUESTA=
+     RESPUESTA=  (caadar (cdadar'((1 (2 (3 (4 5)))) (6 7))))
 
  14. Lista: (((a b) c) ((d e) f) ((g h) i)) → Extraer g
 
-     RESPUESTA=
+     RESPUESTA=  (caar (caddr '(((a b) c) ((d e) f) ((g h) i))))
 
  15. Lista: (((x y) (z w)) ((p q) (r s))) → Extraer r
 
-     RESPUESTA=
+     RESPUESTA= (car(cadadr '(((x y) (z w)) ((p q) (r s)))))
 
  16. Lista: ((1 (2 (3 (4 (5 6))))) (7 8)) → Extraer 5
 
-     RESPUESTA=
+     RESPUESTA= (caar(cdadar(cdadar'((1 (2 (3 (4 (5 6))))) (7 8)))))
 
  17. Lista: ((a (b (c (d e)))) (f g)) → Extraer d
 
-     RESPUESTA=
+     RESPUESTA=   (caadar (cdadar' ((a (b (c (d e)))) (f g))))
 
  18. Lista: (((1 2) (3 4)) ((5 6) (7 8))) → Extraer 7
 
-     RESPUESTA=
+     RESPUESTA=  (car (cadadr ' (((1 2) (3 4)) ((5 6) (7 8)))))
 
  19. Lista: ((x (y (z (w v))))) → Extraer w
 
-     RESPUESTA=
+     RESPUESTA= (caadar(cdadar'((x (y (z (w v)))))))
 
  20. Lista: (((a b c) (d e f)) ((g h i) (j k l))) → Extraer j
 
-     RESPUESTA=
+     RESPUESTA= (car(cadadr'(((a b c) (d e f)) ((g h i) (j k l)))))
