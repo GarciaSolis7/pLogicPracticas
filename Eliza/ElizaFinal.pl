@@ -1,5 +1,5 @@
 % ---------------------------------------------
-% PROYECTO FINAL: Eliza - Version Corregida Definitiva
+% PROYECTO FINAL: Eliza 
 % ---------------------------------------------
 
 % Declaraciones iniciales
@@ -55,7 +55,7 @@ madre_de(laura, jose).
 madre_de(laura, lucia).
 pareja(jorge, laura).
 
-% Otras Relaciones (mantener solo si se desean como hechos directos y no inferidos)
+% Otras Relaciones 
 primo_de(jose, javier).
 primo_de(jose, marta).
 prima_de(lucia, javier).
@@ -253,7 +253,7 @@ eliza :-
 % Procesamiento principal
 procesar_input(['adios']) :- writeln('Adios. Espero haberte ayudado.'), !.
 procesar_input(Input) :-
-    % Intentar procesar la entrada con los diferentes manejadores
+    % Intentar procesar la entrada
     (consultar_relacion(Input)
     ; consultar_diagnostico(Input)
     ; consultar_enfermedad(Input)
@@ -268,7 +268,7 @@ procesar_input(_) :-
     leer_input(NuevaEntrada),
     procesar_input(NuevaEntrada).
 
-% Lectura de entrada: Converts a line of text to a list of atoms
+% Lectura de entrada: 
 leer_input(Input) :-
     read_line_to_string(user_input, String),
     string_lower(String, LowerString),
@@ -294,8 +294,8 @@ match([s(Var)|PatternT], [Atom|InputT], [Atom|ExtractedVars]) :-
 match([H|PatternT], [H|InputT], ExtractedVars) :-
     match(PatternT, InputT, ExtractedVars).
 
-% Helper predicate for family queries (more generic matching)
-% Captures two names regardless of the specific relation word.
+
+% 
 handle_family_query(Input, RelationWord, RelationPredicate) :-
     atom_string(RelationAtom, RelationWord),
     ( (member(es, Input), member(de, Input), % Check for "es" and "de"
@@ -376,9 +376,6 @@ consultar_enfermedad(Input) :-
 
 
 % ----------------------------
-% UTILIDADES
-% ----------------------------
-
 % Replaces occurrences of a substring in a string.
 string_replace(String, Old, New, Result) :-
     atomic_list_concat(List, Old, String),
